@@ -15,6 +15,6 @@ fun main(args: Array<String>){
             println("Job finished")
         }
         jobToWaitFor.join() // non-blocking, but suspending
-        println("Main finished")
     }
+    println("After runBlocking scope")
 }

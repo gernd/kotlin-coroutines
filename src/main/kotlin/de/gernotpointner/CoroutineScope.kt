@@ -13,7 +13,7 @@ fun main() = runBlocking { // this: CoroutineScope
        println("Start of coroutine scope")
         launch {
             println("Task from launch in scope before delay")
-            delay(1500L)
+            delay(4500L)
             println("Task from launch in scope after delay")
         }
 
@@ -21,5 +21,5 @@ fun main() = runBlocking { // this: CoroutineScope
     }
     delay(500L)
 
-    println("End of coroutine scope")
+    println("End of runBlocking scope")
 }
