@@ -8,6 +8,11 @@ fun main() = runBlocking {
         // launch a new coroutine in the scope of blocking coroutine scope
         delay(2000L)
         println("in blocking")
+        runBlocking {
+            println("in nested run blocking")
+            delay(3000)
+            println("in nested run blocking after delay")
+        }
     }
 
     println("Main")
